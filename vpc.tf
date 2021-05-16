@@ -20,3 +20,11 @@ resource "google_compute_subnetwork" "subnet1-mhr" {
   region        = "us-central1"
   network       = google_compute_network.vpc-mhr.id
 }
+resource "google_compute_subnetwork" "subnet2-mhr" {
+
+
+  name          = "subnet2-mhr-dev"
+  ip_cidr_range = "10.1.11.0/24"
+  region        = "us-central1"
+  network       = google_compute_network.vpc-mhr.id
+}
