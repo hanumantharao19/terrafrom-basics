@@ -20,3 +20,16 @@ git checkout -b branchname --it is used to create new branch from existing branc
 git branch -d branchname  --it is used to deleted the branch
 git branch -D branchname  --it is used to delete branch forcefully
 
+
+Jenkins installation
+--------------------
+
+sudo yum install java-1.8.0-openjdk-devel
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+yum install jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo systemctl enable jenkins
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
